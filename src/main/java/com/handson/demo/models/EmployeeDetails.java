@@ -13,6 +13,8 @@ public class EmployeeDetails implements UserDetails{
 	public EmployeeDetails(Employee emp) {
 		this.username=emp.getUsername();
 		this.password=emp.getPassword();
+		System.out.println(username);
+		System.out.println(password);
 	}
 
 	@Override
@@ -36,25 +38,25 @@ public class EmployeeDetails implements UserDetails{
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }
